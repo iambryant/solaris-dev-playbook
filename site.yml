@@ -1,0 +1,12 @@
+---
+- name: "Ensure Automated Installer servers are configured"
+  hosts: solaris_ai
+  become: true
+  roles:
+    - iambryant.solaris.automated_installer
+
+#- name: "Ensure hosts are configured to a baseline"
+#  hosts: all
+#  become: true
+#  roles:
+#    - iambryant.solaris.ntp

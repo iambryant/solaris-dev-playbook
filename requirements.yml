@@ -1,0 +1,5 @@
+---
+collections:
+  - name: iambryant.solaris
+    source: https://github.com/iambryant/ansible-collection-solaris
+    type: git
