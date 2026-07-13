@@ -1,0 +1,8 @@
+- name: "Ensure hosts are configured to a baseline"
+  hosts: all
+  become: true
+  vars:
+    firewall_rules: "{{ [firewall_rules_all | default([]), firewall_rules_node | default([])] | flatten }}"
+  roles:
+    - iambryant.solaris.firewall
+    - iambryant.solaris.ntp
