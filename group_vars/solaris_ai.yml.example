@@ -1,0 +1,19 @@
+---
+firewall_rules_node:
+  - action: "pass in"
+    family: "inet"
+    proto: "udp"
+    to_port: 69
+    comment: "Allow TFTP in"
+
+  - action: "pass in"
+    family: "inet"
+    proto: "tcp"
+    to_port: 5555
+    comment: "Allow HTTP access to AI web server"
+
+  - action: "pass in"
+    family: "inet"
+    proto: "tcp"
+    to_port: 5556
+    comment: "Allow HTTPS access to AI web server"
