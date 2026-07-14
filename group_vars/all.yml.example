@@ -26,25 +26,25 @@ firewall_rules_all:
   - action: "pass in"
     family: "inet6"
     proto: "ipv6-icmp"
-    type: 2
+    options: "icmp6-type 2"
     comment: "PMTUD (Packet too big)"
 
   - action: "pass in"
     family: "inet6"
     proto: "ipv6-icmp"
-    type: 134
+    options: "icmp6-type 134"
     comment: "Router advertisement"
 
   - action: "pass in"
     family: "inet6"
     proto: "ipv6-icmp"
-    type: 135
+    options: "icmp6-type 135"
     comment: "Neighbor solicitation"
 
   - action: "pass in"
     family: "inet6"
     proto: "ipv6-icmp"
-    type: 136
+    options: "icmp6-type 136"
     comment: "Neighbor advertisement"
 
   - action: "pass out"

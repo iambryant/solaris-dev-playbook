@@ -1,3 +1,4 @@
+---
 - name: "Ensure hypervisors are configured"
   hosts: hypervisors
   become: true
