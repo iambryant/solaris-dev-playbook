@@ -3,3 +3,10 @@
   become: true
   roles:
     - iambryant.solaris.ldm
+  tasks:
+    - name: "Test ldom creation"
+      iambryant.solaris.solaris_ldom:
+        name: ldom-web1
+        state: absent
+        vcpu: 16
+        memory: 8G

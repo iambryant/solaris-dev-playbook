@@ -3,8 +3,15 @@ firewall_rules_node:
   - action: "pass in"
     family: "inet"
     proto: "udp"
+    from_port: 68
+    to_port: 67
+    comment: "Allow DHCPv4 requests"
+
+  - action: "pass in"
+    family: "inet"
+    proto: "udp"
     to_port: 69
-    comment: "Allow TFTP in"
+    comment: "Allow TFTP access"
 
   - action: "pass in"
     family: "inet"
